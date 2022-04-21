@@ -1,0 +1,25 @@
+type User @entity {
+  id: ID!
+
+  tranferRecords: [TransferRecord]!
+}
+
+type Token @entity {
+  id: ID!
+
+  name: String!
+  symbol: String!
+  decimals: BigInt!
+}
+
+type TransferRecord @entity {
+  id: ID!
+  transactionHash: String!
+  amount: BigDecimal!
+  from: User!
+  to: User!
+
+  token: Token!
+  block: BigInt!
+  timestamp: BigInt!
+}

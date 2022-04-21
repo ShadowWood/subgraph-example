@@ -1,0 +1,14 @@
+{
+  "name": "token-trans-subgraph",
+  "description": "Token Transfer Subgraph",
+  "version": "1.0.0",
+  "repository": "",
+  "author": "Shadow",
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graph codegen subgraph.yaml --output-dir ./types",
+    "build": "graph build subgraph.yaml",
+    "create-local": "graph create someone/token-trans --node http://localhost:8020",
+    "deploy-local": "graph deploy --debug --node http://localhost:8020 --ipfs http://localhost:5001 someone/token-trans subgraph.yaml"
+  }
+}
